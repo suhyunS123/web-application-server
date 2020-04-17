@@ -35,10 +35,10 @@ public class RequestHandler extends Thread {
         	String[] splited=line.split(" ");
         	String path = splited[1];
         	log.debug("request path : {}", path);
-        	/*while(!"".equals(line)) {
+        	while(!"".equals(line)) {
         		log.debug("request line:{}",line);	
         		line=br.readLine(); 
-        	}*/
+        	}
             // TODO 사용자 요청에 대한 처리는 이 곳에 구현하면 된다.
             DataOutputStream dos = new DataOutputStream(out);
             byte[] body = Files.readAllBytes(new File("./webapp"+path).toPath());
